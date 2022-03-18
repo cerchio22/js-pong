@@ -9,11 +9,15 @@
   --background-color: hsl(var(--hue), var(--saturation), 20%);
 }
 
+/* body make up */
+
 body {
   margin: 0;
-  background-color: var(--background-color);
+  background-color: aquamarine;
   overflow: hidden;
 }
+
+/* opmaak van de driehoek */
 
 .paddle {
   --position: 50;
@@ -27,19 +31,27 @@ body {
 }
 
 .paddle.left {
+  border-top: 25px solid transparent;
+	border-left: 50px solid;
+	border-bottom: 25px solid transparent;
   left: 1vw;
 }
 
 .paddle.right {
+  border-top: 25px solid transparent;
+	border-right: 50px solid;
+	border-bottom: 25px solid transparent;
   right: 1vw;
 }
+
+/* opmaak ball */
 
 .ball {
   --x: 50;
   --y: 50;
 
   position: absolute;
-  background-color: var(--foreground-color);
+  background-color: black;
   left: calc(var(--x) * 1vw);
   top: calc(var(--y) * 1vh);
   border-radius: 50%;
@@ -48,13 +60,17 @@ body {
   height: 2.5vh;
 }
 
+/* scoreboard toevoegen */
+
 .score {
   display: flex;
   justify-content: center;
   font-weight: bold;
   font-size: 7vh;
-  color: var(--foreground-color);
+  color: black;
 }
+
+/* score uit elkaar halen */
 
 .score > * {
   flex-grow: 1;
@@ -66,5 +82,5 @@ body {
 
 .score > :first-child {
   text-align: right;
-  border-right: .5vh solid var(--foreground-color);
+  border-right: .5vh solid;
 }
