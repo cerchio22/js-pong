@@ -69,3 +69,7 @@ function isCollision(rect1, rect2) {
     rect1.bottom >= rect2.top
   )
 }
+
+function myFunction() {
+  document.getElementById("wall").style.visibility = "hidden"
+}

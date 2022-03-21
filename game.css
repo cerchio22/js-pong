@@ -68,6 +68,7 @@ body {
   font-weight: bold;
   font-size: 7vh;
   color: black;
+  text-align: left;
 }
 
 /* score uit elkaar halen */
@@ -82,5 +83,10 @@ body {
 
 .score > :first-child {
   text-align: right;
-  border-right: .5vh solid;
+}
+
+#wall {
+  width: 1px;
+  height: 700px;
+  background-color: black;
 }
