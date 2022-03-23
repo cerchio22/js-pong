@@ -89,4 +89,6 @@ body {
   width: 1px;
   height: 700px;
   background-color: black;
+  visibility: hidden;
+  transition-delay: 2s;
 }

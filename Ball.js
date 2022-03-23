@@ -70,6 +70,3 @@ function isCollision(rect1, rect2) {
   )
 }
 
-function myFunction() {
-  document.getElementById("wall").style.visibility = "hidden"
-}
