@@ -2,18 +2,11 @@
   box-sizing: border-box;
 }
 
-:root {
-  --hue: 200;
-  --saturation: 50%;
-  --foreground-color: hsl(var(--hue), var(--saturation), 75%);
-  --background-color: hsl(var(--hue), var(--saturation), 20%);
-}
-
 /* body make up */
 
 body {
   margin: 0;
-  background-color: aquamarine;
+  background-color: gold;
   overflow: hidden;
 }
 
@@ -26,8 +19,7 @@ body {
   background-color: var(--foreground-color);
   top: calc(var(--position) * 1vh);
   transform: translateY(-50%);
-  width: 1vh;
-  height: 10vh;
+  
 }
 
 .paddle.left {
@@ -89,6 +81,11 @@ body {
   width: 1px;
   height: 700px;
   background-color: black;
+  visibility: visible;
+  transition-duration: 1s;
+}
+
+#wall:hover {
   visibility: hidden;
-  transition-delay: 2s;
+  background-color: gold;
 }

@@ -48,6 +48,3 @@ document.addEventListener("mousemove", e => {
 
 window.requestAnimationFrame(update)
 
-function myFunction () {
-  document.getElementById("wall").style.visibility = "visible"
-}

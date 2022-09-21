@@ -1,5 +1,6 @@
 const INITIAL_VELOCITY = 0.025
 const VELOCITY_INCREASE = 0.00001
+const wall = document.getElementById('wall')
 
 export default class Ball {
   constructor(ballElem) {
@@ -51,7 +52,7 @@ export default class Ball {
       this.direction.y *= -1
     }
 
-    if (paddleRects.some(r => isCollision(r, rect))) {
+    if (paddleRects.some(r => isCollision(r, rect)) || isCollidingWithWall(rect) ) {
       this.direction.x *= -1
     }
   }
@@ -67,6 +68,19 @@ function isCollision(rect1, rect2) {
     rect1.right >= rect2.left &&
     rect1.top <= rect2.bottom &&
     rect1.bottom >= rect2.top
+  )
+}
+
+function isCollidingWithWall(ballRect) {
+  const wallRect = wall.getBoundingClientRect();
+
+  if(wall.style.visibility)
+  
+  return (
+    wallRect.left <= ballRect.right &&
+    wallRect.right >= ballRect.left &&
+    wallRect.top <= ballRect.bottom &&
+    wallRect.bottom >= ballRect.top
   )
 }
 
